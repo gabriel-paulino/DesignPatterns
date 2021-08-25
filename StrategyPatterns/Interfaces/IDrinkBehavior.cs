@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Interfaces
+﻿namespace StrategyPatterns.Interfaces
 {
     public interface IDrinkBehavior
     {

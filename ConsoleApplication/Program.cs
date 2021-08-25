@@ -1,9 +1,9 @@
-﻿using DesignPatterns.Entities;
-using DesignPatterns.Execute.CookBehavior;
-using DesignPatterns.Interfaces;
+﻿using StrategyPatterns.Entities;
 using StrategyPatterns.Execute.CookBehavior;
 using StrategyPatterns.Execute.DrinkBehavior;
 using StrategyPatterns.Execute.EatBehavior;
+using StrategyPatterns.Execute.SalaryBehavior;
+using StrategyPatterns.Interfaces;
 using System;
 
 namespace ConsoleApplication
@@ -19,6 +19,24 @@ namespace ConsoleApplication
         {
             InterviewAChild();
             InterviewAMen();
+
+            SalaryExemple();
+        }
+
+        private static void SalaryExemple()
+        {
+            decimal grossSalary = 3800.00m;
+            decimal alimony = 700.00m;
+            int dependents = 2;
+
+            ISalaryBehavior salaryBehavior = new CltSalary(
+                grossSalary: grossSalary,
+                alimony: alimony,
+                dependents: dependents);
+
+            Employee employee = new(salaryBehavior);
+
+            decimal salaryWithDiscounts = employee.GetSalary();
         }
 
         private static void InterviewAChild()

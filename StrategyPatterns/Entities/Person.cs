@@ -1,6 +1,6 @@
-﻿using DesignPatterns.Interfaces;
+﻿using StrategyPatterns.Interfaces;
 
-namespace DesignPatterns.Entities
+namespace StrategyPatterns.Entities
 {
     public class Person
     {

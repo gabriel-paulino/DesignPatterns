@@ -1,6 +1,6 @@
-﻿using DesignPatterns.Interfaces;
+﻿using StrategyPatterns.Interfaces;
 
-namespace DesignPatterns.Execute.CookBehavior
+namespace StrategyPatterns.Execute.CookBehavior
 {
     public class NoCook : ICookBehavior
     {

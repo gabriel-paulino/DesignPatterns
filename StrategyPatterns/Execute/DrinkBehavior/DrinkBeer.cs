@@ -1,4 +1,4 @@
-﻿using DesignPatterns.Interfaces;
+﻿using StrategyPatterns.Interfaces;
 
 namespace StrategyPatterns.Execute.DrinkBehavior
 {

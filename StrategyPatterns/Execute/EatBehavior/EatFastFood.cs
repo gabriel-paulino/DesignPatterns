@@ -1,4 +1,4 @@
-﻿using DesignPatterns.Interfaces;
+﻿using StrategyPatterns.Interfaces;
 using System;
 
 namespace StrategyPatterns.Execute.EatBehavior
