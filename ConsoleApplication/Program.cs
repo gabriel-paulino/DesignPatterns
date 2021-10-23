@@ -12,7 +12,7 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            StrategyPatterns();            
+            StrategyPatterns();
         }
 
         private static void StrategyPatterns()
@@ -20,23 +20,36 @@ namespace ConsoleApplication
             InterviewAChild();
             InterviewAMen();
 
-            SalaryExemple();
+            SalaryExample();
         }
 
-        private static void SalaryExemple()
+        private static void SalaryExample()
         {
             decimal grossSalary = 3800.00m;
-            decimal alimony = 700.00m;
+            decimal alimony = 700.0m;
             int dependents = 2;
 
-            ISalaryBehavior salaryBehavior = new CltSalary(
+           var salaryBehavor  = new CltSalary(
                 grossSalary: grossSalary,
                 alimony: alimony,
                 dependents: dependents);
 
-            Employee employee = new(salaryBehavior);
+            Employee employee = new(salaryBehavor);
 
             decimal salaryWithDiscounts = employee.GetSalary();
+
+            Console.WriteLine(
+                $"GrossSalary: {salaryBehavor.GrossSalary}{Environment.NewLine}" +
+                $"Alimony: {salaryBehavor.Alimony}{Environment.NewLine}" +
+                $"Dependents: {salaryBehavor.Dependents}{Environment.NewLine}" +
+                $"AliquotInss: {salaryBehavor.AliquotInss}{Environment.NewLine}" +
+                $"TaxInss: {salaryBehavor.TaxInss}{Environment.NewLine}" +
+                $"TaxIrrf: {salaryBehavor.TaxIrrf}{Environment.NewLine}" +
+                $"BaseCalc: {salaryBehavor.BaseCalc}{Environment.NewLine}" +
+                $"AliquotIrrf: {salaryBehavor.AliquotIrrf}{Environment.NewLine}" +
+                $"DeductionIrrf: {salaryBehavor.DeductionIrrf}{Environment.NewLine}" +
+                $"OthersDiscounts: {salaryBehavor.OthersDiscounts}{Environment.NewLine}" +
+                $"NetSalary: {salaryWithDiscounts}{Environment.NewLine}");
         }
 
         private static void InterviewAChild()

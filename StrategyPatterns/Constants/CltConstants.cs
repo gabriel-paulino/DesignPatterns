@@ -12,10 +12,10 @@
             BiggerSalaryOfAliquotInssLevelOne = 2203.48m,
             BiggerSalaryOfAliquotInssLevelTwo = 3305.22m,
             BiggerSalaryOfAliquotInssLevelThree = 6433.57m,
-            PercentageAliquotInssMinSalary = 7.5m,
-            PercentageAliquotInssLevelOne = 9m,
-            PercentageAliquotInssLevelTwo = 12m,
-            PercentageAliquotInssLevelThree = 14m,
+            PercentageAliquotInssMinSalary = 7.5m / 100,
+            PercentageAliquotInssLevelOne = 9m / 100,
+            PercentageAliquotInssLevelTwo = 12m / 100,
+            PercentageAliquotInssLevelThree = 14m / 100,
             MaximumDiscountInss = 751.99m,
             DeductionInssPerDependent = 189.59m,
             BiggerSalaryOfAliquotIrrfLevelOne = 1903.98m,
@@ -34,8 +34,8 @@
             DeductionIrrfLevelMax = 869.36m;
 
         public const decimal
-            FirstSalaryRange = MinimumSalary * PercentageAliquotInssMinSalary / 100,
-            SecondSalaryRange = (BiggerSalaryOfAliquotInssLevelOne - MinimumSalary) * PercentageAliquotInssLevelOne / 100,
-            ThirdSalaryRange = (BiggerSalaryOfAliquotInssLevelTwo - BiggerSalaryOfAliquotInssLevelOne) * PercentageAliquotInssLevelTwo / 100;
+            FirstSalaryRange = MinimumSalary * PercentageAliquotInssMinSalary,
+            SecondSalaryRange = (BiggerSalaryOfAliquotInssLevelOne - MinimumSalary) * PercentageAliquotInssLevelOne,
+            ThirdSalaryRange = (BiggerSalaryOfAliquotInssLevelTwo - BiggerSalaryOfAliquotInssLevelOne) * PercentageAliquotInssLevelTwo;
     }
 }
